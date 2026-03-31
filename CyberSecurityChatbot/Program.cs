@@ -31,6 +31,7 @@ namespace CyberSecurityChatbot
  CYBERSECURITY AWARENESS CHATBOT
 ====================================
 ");
+
             Console.ResetColor();
 
             // 👤 USER INPUT
