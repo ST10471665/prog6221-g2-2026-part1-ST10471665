@@ -13,6 +13,11 @@ namespace CyberSecurityChatbot
 ====================================
 ");
             Console.ResetColor();
+          
+            Console.Write("Enter your name: ");
+                string name = Console.ReadLine();
+
+            Console.WriteLine($"Welcome, {name}! I will help you stay safe online.");
         }
     }
 }
