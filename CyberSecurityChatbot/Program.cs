@@ -33,7 +33,15 @@ namespace CyberSecurityChatbot
 
                 string response = bot.GetResponse(input);
                 Console.WriteLine("Bot: " + response);
+
+                    // ⚠️ INPUT VALIDATION
+                    if (string.IsNullOrWhiteSpace(input))
+                    {
+                        Console.WriteLine("Please enter something.");
+                        continue;
+                    }
+
+                }
             }
         }
     }
-}
