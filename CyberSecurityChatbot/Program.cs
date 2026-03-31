@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Media;
+using System.Diagnostics;
 
 namespace CyberSecurityChatbot
 {
@@ -12,11 +13,11 @@ namespace CyberSecurityChatbot
             {
                 string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "welcome.wav");
 
-                Console.WriteLine("Looking for file at: " + path);
-
-                SoundPlayer player = new SoundPlayer(path);
-                player.Load();
-                player.Play();
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = path,
+                    UseShellExecute = true
+                });
             }
             catch (Exception ex)
             {
