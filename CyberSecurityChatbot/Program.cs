@@ -17,7 +17,23 @@ namespace CyberSecurityChatbot
             Console.Write("Enter your name: ");
                 string name = Console.ReadLine();
 
-            Console.WriteLine($"Welcome, {name}! I will help you stay safe online."); 
+            Console.WriteLine($"Welcome, {name}! I will help you stay safe online.");
+
+            // 🤖 Create chatbot
+            Chatbot bot = new Chatbot();
+
+            // 🔁 Chat loop
+            while (true)
+            {
+                Console.Write("\nYou: ");
+                string input = Console.ReadLine();
+
+                if (input.ToLower().Contains("exit"))
+                    break;
+
+                string response = bot.GetResponse(input);
+                Console.WriteLine("Bot: " + response);
+            }
         }
     }
 }
